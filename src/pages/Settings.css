@@ -1,0 +1,119 @@
+.settings-page {
+    padding-bottom: var(--space-16);
+    max-width: 800px;
+}
+
+.settings-page__header {
+    margin-bottom: var(--space-10);
+}
+
+.settings-page__title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tighter);
+    margin-top: var(--space-2);
+}
+
+.settings-page__desc {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-2);
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.settings-section__title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-4);
+    margin-left: var(--space-1);
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    overflow: hidden;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+.settings-item__left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.settings-item__icon {
+    color: var(--color-text-tertiary);
+}
+
+.settings-item__label {
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+.settings-toggle {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    position: relative;
+    cursor: pointer;
+    transition: all var(--duration-fast);
+}
+
+.settings-toggle--on {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.settings-toggle__handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform var(--duration-fast);
+}
+
+.settings-toggle--on .settings-toggle__handle {
+    transform: translateX(20px);
+}
+
+.settings-select {
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-surface);
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    outline: none;
+    cursor: pointer;
+}
+
+.settings-select:hover {
+    border-color: var(--color-border-hover);
+}

@@ -1,0 +1,4 @@
+/* We use index.css for global styles, this file can remain empty or handle global app transitions. */
+.app-container {
+  width: 100%;
+}

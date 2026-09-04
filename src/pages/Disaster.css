@@ -1,0 +1,164 @@
+.disaster-page {
+    padding-bottom: var(--space-16);
+}
+
+.disaster-page__header {
+    margin-bottom: var(--space-8);
+}
+
+.disaster-page__title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tighter);
+    margin-top: var(--space-2);
+}
+
+.disaster-page__desc {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-2);
+    max-width: 600px;
+}
+
+/* Overview */
+.disaster-overview {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.disaster-overview__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+}
+
+.disaster-overview__item--highlight {
+    border-color: var(--color-high);
+    background: var(--color-high-subtle);
+    color: var(--color-high);
+}
+
+.disaster-overview__count {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+}
+
+.disaster-overview__label {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.disaster-overview__item--highlight .disaster-overview__label {
+    color: var(--color-high);
+    opacity: 0.8;
+}
+
+/* Threat Grid */
+.disaster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-5);
+}
+
+.threat-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    transition: border-color var(--duration-normal);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.threat-card:hover {
+    border-color: var(--color-border-hover);
+}
+
+.threat-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.threat-card__type {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+}
+
+.threat-card__risk {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: var(--tracking-widest);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+}
+
+.threat-card__probability {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.threat-card__prob-bar-bg {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-bg-surface);
+    overflow: hidden;
+}
+
+.threat-card__prob-bar {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.threat-card__prob-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.threat-card__prob-value {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.threat-card__trend {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    text-transform: capitalize;
+}
+
+.threat-card__detail {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+}
+
+.threat-card__region {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+    .disaster-grid {
+        grid-template-columns: 1fr;
+    }
+}
