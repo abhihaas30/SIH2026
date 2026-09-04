@@ -206,7 +206,7 @@ export default function Forecast() {
         async function loadWeather() {
             try {
                 // Hyderabad coordinates
-                const weather = await fetchWeather(17.385, 78.4867);
+                const weather = await fetchWeather(51.5074, -0.1278);
 
                 // Replace mock data with live API data
                 setCurrentWeather(weather.currentWeather);
