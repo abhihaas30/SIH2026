@@ -14,7 +14,7 @@ import {
 } from '../data/weatherData';
 
 
-import { fetchWeather } from '../services/weatherApi';
+import { fetchWeather } from '../services/WeatherApi';
 import './Forecast.css';
 
 const tabs = ['Temperature', 'Rain', 'Wind', 'Humidity'];
